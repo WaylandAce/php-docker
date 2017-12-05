@@ -29,5 +29,8 @@ RUN chmod +x /usr/local/bin/run
 RUN a2enmod rewrite
 RUN a2enmod vhost_alias
 
+RUN echo "include_path = \"/pear\"\n" \
+         > /etc/php/7.0/apache2/conf.d/dev.ini
+
 EXPOSE 80
 CMD ["/usr/local/bin/run"]
