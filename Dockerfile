@@ -17,6 +17,10 @@ RUN apt-get update && \
       php-mysql \
       php-opcache \
       php-xml \
+      php-curl \
+      php-mcrypt \
+      php-bcmath \
+      php-xmlrpc \
       php-xsl \
       php-zip \
       php-soap \
