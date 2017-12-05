@@ -35,6 +35,8 @@ RUN chmod +x /usr/local/bin/run
 RUN a2enmod rewrite
 RUN a2enmod vhost_alias
 
+RUN echo "xdebug.remote_enable=on" >> /etc/php/7.0/apache2/conf.d/20-xdebug.ini
+
 RUN echo "include_path = \"/pear\"\n" \
          > /etc/php/7.0/apache2/conf.d/dev.ini
 
