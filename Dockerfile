@@ -28,6 +28,7 @@ RUN apt-get update && \
       php-memcached \
       composer
 
+COPY resolv.conf /etc/resolv.conf
 COPY apache_default /etc/apache2/sites-available/000-default.conf
 COPY run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
