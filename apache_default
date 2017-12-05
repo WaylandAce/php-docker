@@ -8,13 +8,16 @@
 	# However, you must set it for any further virtual host explicitly.
 	#ServerName www.example.com
 
-	ServerAdmin webmaster@localhost
-	DocumentRoot /var/www
+	Servername _none_
+	Serveralias         *.dyninno.lan
+	VirtualDocumentRoot /var/www/%-3
 
-    <Directory /var/www>
-        AllowOverride All
-        Require all granted
-    </Directory>
+	ServerAdmin webmaster@localhost
+
+	<Directory /var/www>
+		AllowOverride All
+		Require all granted
+	</Directory>
 
 	# Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
 	# error, crit, alert, emerg.
@@ -22,8 +25,8 @@
 	# modules, e.g.
 	#LogLevel info ssl:warn
 
-    ErrorLog /dev/stdout
-    CustomLog /dev/stdout combined
+	ErrorLog /dev/stdout
+	CustomLog /dev/stdout combined
 
 	# For most configuration files from conf-available/, which are
 	# enabled or disabled at a global level, it is possible to
